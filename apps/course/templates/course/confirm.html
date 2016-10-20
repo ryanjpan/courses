@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1> Are you sure you want to delete this course?</h1>
+        <h3>{{name}}</h3>
+        <p>
+            {{description}}
+        </p>
+        <form action="/confirmed" method="post">
+            {% csrf_token %}
+            <button type="submit" name="confirm" value="yes">Yes</button>
+            <button type="submit" name="confirm" value="no">No</button>
+        </form>
+    </body>
+</html>
